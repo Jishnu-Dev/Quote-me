@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .main {
@@ -78,6 +77,20 @@
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
 }
+
+.longtitle {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 1.5em;
+  background-image: linear-gradient( 68.3deg,  rgba(245,177,97,1) 0.4%, rgba(236,54,110,1) 100.2% );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+
+
 
 .title:hover,
 .title:focus

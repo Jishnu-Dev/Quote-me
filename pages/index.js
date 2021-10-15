@@ -7,19 +7,18 @@ export default function Home() {
   let brand = 'QuoteMe'
   let [quote, setQuote] = useState(null)
   let [author, setAuthor] = useState(null)
-  let loading = false
+  let [quoteLength, setLength] = useState(0)
 
   async function randomQuote() {
-    loading = true
     const response = await fetch('https://api.quotable.io/random')
     const data = await response.json()
-    loading = false
     setQuote(data.content)
     setAuthor(data.author)
+    setLength(data.length) 
+    console.log(quoteLength)
   }
   
   return (
-    <div>
     <div className={styles.container}>
     <header className={styles.header}>
     <h2 className={styles.headertitle}>
@@ -32,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <h1 className={styles.title}>
+      <h1 className={quoteLength > 200 ? styles.longtitle:styles.title}>
         {quote ? quote:`Welcome to ${brand}`}
       </h1>
       <h3 className={styles.author}>{ author ? `- ${author}`:null }</h3>
@@ -54,6 +53,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  </div>
   )
 }
