@@ -46,8 +46,8 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Made by{' '}
-          <span style={{fontWeight: 800, color: '#0070f3'}} className={styles.logo}>
+          Made by &nbsp;
+          <span className={styles.footername}>
             Jishnu Raj
           </span>
         </a>

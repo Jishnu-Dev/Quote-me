@@ -26,7 +26,7 @@
 }
 
 .headertitle:hover {
-  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  background-image: linear-gradient( 68.3deg,  rgba(245,177,97,1) 0.4%, rgba(236,54,110,1) 100.2% );
   background-clip: border-box;
   -webkit-background-clip: text;
   background-clip: text;
@@ -65,8 +65,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
-
-  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  background-image: linear-gradient( 68.3deg,  rgba(245,177,97,1) 0.4%, rgba(236,54,110,1) 100.2% );
   background-clip: border-box;
   -webkit-background-clip: text;
   background-clip: text;
@@ -75,13 +74,33 @@
 }
 
 .title:hover {
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% );
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
 }
+
+.footername {
+  font-Weight: 800;
+  color: #0070f3 !important;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  -webkit-box-decoration-break: clone;
+}
+
+.footername:hover {
+  background-image: linear-gradient( 68.3deg,  rgba(245,177,97,1) 0.4%, rgba(236,54,110,1) 100.2% );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+
 
 .author {
   color: #000;
@@ -138,7 +157,7 @@
 .card:focus,
 .card:active {
   /* color: #0070f3; */
-  border-color: #00d2ff;
+  border-color: #000;
 }
 
 .card h2 {
