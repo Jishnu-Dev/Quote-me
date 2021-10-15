@@ -36,7 +36,7 @@ export default function Home() {
       </h1>
       <h3 className={styles.author}>{ author ? `- ${author}`:null }</h3>
       <a onClick={randomQuote} className={styles.card}>
-        <h2 style={{marginBottom: 0}}>Read &rarr;</h2>
+        <h2 style={{marginBottom: 0}}>Get Wisdom &rarr;</h2>
       </a>
       </main>
 
