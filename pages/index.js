@@ -19,17 +19,18 @@ export default function Home() {
   }
   
   return (
+    <div>
     <div className={styles.container}>
+    <header className={styles.header}>
+    <h2 className={styles.headertitle}>
+      <a href="\" style={{fontWeight: 700, color: '#a8a8a8 '}}>QuoteMe</a> 😊
+    </h2>
+    </header>
       <Head>
         <title>QuoteMe | Make your day</title>
         <meta name="description" content="Quote me random quotes" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.header}>
-      <h2 className={styles.headertitle}>
-        <a href="\" style={{fontWeight: 700, color: '#a8a8a8 '}}>QuoteMe</a> 😊
-      </h2>
-      </header>
       <main className={styles.main}>
       <h1 className={styles.title}>
         {quote ? quote:`Welcome to ${brand}`}
@@ -53,5 +54,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+  </div>
   )
 }
