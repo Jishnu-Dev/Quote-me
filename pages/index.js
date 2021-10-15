@@ -26,15 +26,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={styles.header}>
-      <h2 className={styles.description}>
+      <h2 className={styles.headertitle}>
         <a href="\" style={{fontWeight: 700, color: '#a8a8a8 '}}>QuoteMe</a> 😊
       </h2>
       </header>
       <main className={styles.main}>
       <h1 className={styles.title}>
-        {quote ? quote:`Welcome to "${brand}"`}
+        {quote ? quote:`Welcome to ${brand}`}
       </h1>
-      <h3 style={{color: '#0070f3'}}>{ author ? `- ${author}`:null }</h3>
+      <h3 className={styles.author}>{ author ? `- ${author}`:null }</h3>
       <a onClick={randomQuote} className={styles.card}>
         <h2 style={{marginBottom: 0}}>Read &rarr;</h2>
       </a>
