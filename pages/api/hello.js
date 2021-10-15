@@ -2,5 +2,5 @@
 
 export default function handler(req, res) {
   res.status(200).json({ name: 'Jishnu Raj' })
-  console.log('HELOO WORLD')
+  console.log('Quote Me')
 }

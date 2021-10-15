@@ -81,6 +81,7 @@
 .card {
   margin: 1rem;
   padding: 1.5rem;
+  width: auto;
   text-align: left;
   cursor: pointer;
   color: inherit;

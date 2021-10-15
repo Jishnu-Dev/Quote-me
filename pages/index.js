@@ -1,8 +1,21 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
+// import Image from 'next/image'
 
 export default function Home() {
+  let brand = 'QuoteMe'
+  let [quote, setQuote] = useState(null)
+  let [author, setAuthor] = useState(null)
+
+  async function randomQuote() {
+    const response = await fetch('https://api.quotable.io/random')
+    const data = await response.json()
+    setQuote(data.content)
+    setAuthor(data.author)
+    // console.log(`${data.content} —${data.author}`)
+  }
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -14,18 +27,19 @@ export default function Home() {
       <main className={styles.main}>
 
       <small className={styles.description} style={{marginBottom: '6rem'}}>
-      <a href="\" style={{fontWeight: 700, color: '#0070f3'}}>QuoteMe</a> 😊
+      <a href="\" style={{fontWeight: 700, color: '#a8a8a8 '}}>QuoteMe</a> 😊
       </small>
-
+        
         <h1 className={styles.title}>
-          Welcome to <span style={{color: '#0070f3'}}>QuoteMe</span>
+          {quote ? quote:`Welcome to ${brand}`}
         </h1>
+        <h3 style={{color: '#0070f3'}}>{ author ? `- ${author}`:null }</h3>
 
-        <div className={styles.grid}>
-          <a onClick={QuotMe} className={styles.card}>
-            <h2 style={{marginBottom: 0}}>Click me to get a quote &rarr;</h2>
+          <a onClick={randomQuote} className={styles.card}>
+            <h2 style={{marginBottom: 0}}>Read &rarr;</h2>
           </a>
 
+        <div className={styles.grid}>
         </div>
       </main>
 
@@ -42,18 +56,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
-}
-
-function QuotMe() {
-  return (
-  fetch('https://api.quotable.io/random')
-  .then(response => response.json())
-  .then(data => {
-    var quote = data.content
-    // var author = data.author
-    alert(quote)
-    console.log(`${data.content} —${data.author}`)
-  })
   )
 }
