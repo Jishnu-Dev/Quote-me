@@ -42,13 +42,13 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://github.com/Jishnu-Dev"
+          href="https://www.instagram.com/plutokyd/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Made by &nbsp;
+          Follow Me On &nbsp;
           <span className={styles.footername}>
-            Jishnu Raj
+            Instagram
           </span>
         </a>
       </footer>

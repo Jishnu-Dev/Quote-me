@@ -90,8 +90,6 @@
   -webkit-box-decoration-break: clone;
 }
 
-
-
 .title:hover,
 .title:focus
 .title:active {
@@ -127,7 +125,6 @@
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
 }
-
 
 .author {
   color: #000;
