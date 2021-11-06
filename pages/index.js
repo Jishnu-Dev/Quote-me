@@ -8,14 +8,16 @@ export default function Home() {
   let [quote, setQuote] = useState(null)
   let [author, setAuthor] = useState(null)
   let [quoteLength, setLength] = useState(0)
+  let [loading, setLoading] = useState(false)
 
   async function randomQuote() {
+    setLoading(true)
     const response = await fetch('https://api.quotable.io/random')
     const data = await response.json()
     setQuote(data.content)
     setAuthor(data.author)
+    setLoading(false)
     setLength(data.length) 
-    console.log(quoteLength)
   }
   
   return (
@@ -36,7 +38,7 @@ export default function Home() {
       </h1>
       <h3 className={styles.author}>{ author ? `- ${author}`:null }</h3>
       <a onClick={randomQuote} className={styles.card}>
-        <h2 style={{marginBottom: 0}}>Get Wisdom &rarr;</h2>
+        <h2 style={{marginBottom: 0}}>{ loading ? 'Getting...':'Get Wisdom' }</h2>
       </a>
       </main>
 
